@@ -31,9 +31,10 @@ Encoding categorical data
 Normalizing the data
 Splitting the data into test and train
 
-## developed by : palamakula deepika
-## registration no: 21221240035
+## Developed by : palamakula deepika
+## Registration no: 212221240035
 ### PROGRAM:
+~~~~~~~~~~~~~~~~~~~~~~
 import pandas as pd
 df=pd.read_csv("/content/Churn_Modelling.csv")
 df.head()
@@ -58,7 +59,7 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 df1 = sc.fit_transform(df)
 print(df1)
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### OUTPUT:
 
