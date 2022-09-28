@@ -34,6 +34,7 @@ Splitting the data into test and train
 ## developed by : palamakula deepika
 ## registration no: 21221240035
 ##PROGRAM:
+\\\\\\\\\\\\\\\\*
 import pandas as pd
 df=pd.read_csv("/content/Churn_Modelling.csv")
 df.head()
@@ -58,14 +59,14 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 df1 = sc.fit_transform(df)
 print(df1)
+*******||\\\\\\\\\\
 
 ##OUTPUT:
+
 <img width="922" alt="nn-1" src="https://user-images.githubusercontent.com/94154679/192851298-759af2ca-2a7c-4950-8eff-736c13d8309f.png">
 <img width="475" alt="nn-2" src="https://user-images.githubusercontent.com/94154679/192851326-438fced7-eb5e-483e-ad18-bc47c3c017cd.png">
 <img width="485" alt="nn-3" src="https://user-images.githubusercontent.com/94154679/192851347-b9509843-9c40-4c6c-8096-b978ef42dacd.png">
 <img width="439" alt="nn-4" src="https://user-images.githubusercontent.com/94154679/192851361-231110f0-6284-4b59-9432-a6e449aead43.png">
 
-
-
-##RESULT
+##RESULT :
 Thus the above program for standardizing the given data was implemented successfully.
