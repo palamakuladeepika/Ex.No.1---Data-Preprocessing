@@ -31,11 +31,41 @@ Encoding categorical data
 Normalizing the data
 Splitting the data into test and train
 
+## developed by : palamakula deepika
+## registration no: 21221240035
 ##PROGRAM:
-/Write your code here/
+import pandas as pd
+df=pd.read_csv("/content/Churn_Modelling.csv")
+df.head()
+df.isnull().sum()
+df.drop(["RowNumber","Age","Gender","Geography","Surname"],inplace=True,axis=1)
+print(df)
+x=df.iloc[:,:-1].values
+y=df.iloc[:,-1].values
+print(x)
+print(y)
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+df1 = pd.DataFrame(scaler.fit_transform(df))
+print(df1)
+from sklearn.model_selection import train_test_split
+xtrain,ytrain,xtest,ytest=train_test_split(x,y,test_size=0.2,random_state=2)
+print(xtrain)
+print(len(xtrain))
+print(xtest)
+print(len(xtest))
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+df1 = sc.fit_transform(df)
+print(df1)
 
 ##OUTPUT:
-/ Show the result/
+<img width="922" alt="nn-1" src="https://user-images.githubusercontent.com/94154679/192851298-759af2ca-2a7c-4950-8eff-736c13d8309f.png">
+<img width="475" alt="nn-2" src="https://user-images.githubusercontent.com/94154679/192851326-438fced7-eb5e-483e-ad18-bc47c3c017cd.png">
+<img width="485" alt="nn-3" src="https://user-images.githubusercontent.com/94154679/192851347-b9509843-9c40-4c6c-8096-b978ef42dacd.png">
+<img width="439" alt="nn-4" src="https://user-images.githubusercontent.com/94154679/192851361-231110f0-6284-4b59-9432-a6e449aead43.png">
+
+
 
 ##RESULT
-/Type your result here/
+Thus the above program for standardizing the given data was implemented successfully.
